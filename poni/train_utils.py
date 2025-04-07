@@ -5,9 +5,9 @@ import torch.nn as nn
 from torch.utils.data._utils.collate import (
     default_collate_err_msg_format,
     np_str_obj_array_pattern,
-    string_classes,
+    # string_classes,
 )
-
+string_classes = (str, bytes)
 
 def get_loss_fn(loss_type):
     assert loss_type in ["bce", "l2", "l1", "xent"]
